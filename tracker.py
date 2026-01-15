@@ -5,7 +5,7 @@ import cv2
 import supervision as sv
 from ultralytics import YOLO
 
-detector = YOLO('yolo11n.pt')
+detector = YOLO('yolo11m.pt')
 tracker = sv.ByteTrack()
 box_annotator = sv.BoxAnnotator()
 label_annotator = sv.LabelAnnotator()
@@ -70,7 +70,7 @@ if __name__ == "__main__":
     target_path = BASE_DIR / "outputs" / "crowd_annotated.mp4"
 
     track_video(
-        source_path=str(source_path),
-        target_path=str(target_path)
+        src_path=str(source_path),
+        trgt_path=str(target_path)
     )
     print("Processing complete. Annotated video saved as 'crowd_annotated.mp4'.")
