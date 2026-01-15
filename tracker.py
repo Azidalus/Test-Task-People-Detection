@@ -1,7 +1,5 @@
-import os
 import numpy as np
 from pathlib import Path
-import cv2
 import supervision as sv
 from ultralytics import YOLO
 
@@ -77,6 +75,7 @@ if __name__ == "__main__":
 
     target_path.parent.mkdir(exist_ok=True)
 
+    # Запуск трекинга видео
     track_video(
         src_path=str(source_path),
         trgt_path=str(target_path)
