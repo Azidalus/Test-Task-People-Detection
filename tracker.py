@@ -71,7 +71,7 @@ if __name__ == "__main__":
     # Создание кроссплатформенных путей к файлам с помощью pathlib
     BASE_DIR = Path(__file__).resolve().parent
     source_path = BASE_DIR / "assets" / "crowd.mp4"
-    target_path = BASE_DIR / "outputs" / "crowd_annotated.mp4"
+    target_path = BASE_DIR / "outputs" / "crowd_tracked.mp4"
 
     target_path.parent.mkdir(exist_ok=True)
 
@@ -80,4 +80,4 @@ if __name__ == "__main__":
         src_path=str(source_path),
         trgt_path=str(target_path)
     )
-    print("Processing complete. Annotated video saved as 'crowd_annotated.mp4'.")
+    print("Processing complete. Annotated video saved as 'crowd_tracked.mp4'.")
