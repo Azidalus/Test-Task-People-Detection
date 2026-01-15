@@ -1,0 +1,11 @@
+env/
+venv/
+.venv/
+
+# Ignore large auto-generated files
+*.avi
+*.mov
+*.pth
+*.dll
+*.lib
+*.pyd
