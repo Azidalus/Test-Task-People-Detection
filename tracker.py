@@ -12,15 +12,15 @@ label_annotator = sv.LabelAnnotator()
 
 def callback(frame: np.ndarray, _: int) -> np.ndarray:
     """
-        Обработчик кадров для детекции и трекинга людей.
+    Обработчик кадров для детекции и трекинга людей.
 
-        Args:
-        frame (np.ndarray): Входной кадр видео.
-        _: Номер кадра (не используется).
+    Args:
+    frame (np.ndarray): Входной кадр видео.
+    _: Номер кадра (не используется).
 
-        Returns: 
-        np.ndarray: Аннотированный кадр 
-        с детекциями и трекингом людей.
+    Returns: 
+    np.ndarray: Аннотированный кадр 
+    с детекциями и трекингом людей.
     """
     results = detector(frame)[0]
     
@@ -55,6 +55,12 @@ def callback(frame: np.ndarray, _: int) -> np.ndarray:
 
 
 def track_video(src_path, trgt_path):
+    """
+    Запускает процесс трекинга людей в видео.
+
+    src_path: Путь к исходному видеофайлу.
+    trgt_path: Путь к целевому видеофайлу.
+    """
     sv.process_video(
         source_path=src_path,
         target_path=trgt_path,
@@ -64,10 +70,12 @@ def track_video(src_path, trgt_path):
 
 if __name__ == "__main__":
 
+    # Создание кроссплатформенных путей к файлам с помощью pathlib
     BASE_DIR = Path(__file__).resolve().parent
-
     source_path = BASE_DIR / "assets" / "crowd.mp4"
     target_path = BASE_DIR / "outputs" / "crowd_annotated.mp4"
+
+    target_path.parent.mkdir(exist_ok=True)
 
     track_video(
         src_path=str(source_path),
