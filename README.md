@@ -28,4 +28,4 @@ docker run --rm ` -v ${PWD}\assets:/app/assets ` -v ${PWD}\outputs:/app/outputs 
 ```
 
 ## Результат
-Обработанное видео *crowds_tracked.mp4* будет в папке *Test-Task-People-Detection/outputs*.
+Обработанное видео *crowds.avi* будет в папке *Test-Task-People-Detection/outputs/track*.
