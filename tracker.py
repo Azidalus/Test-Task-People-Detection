@@ -24,4 +24,4 @@ if __name__ == "__main__":
         line_width=2 # Толщина линий для аннотаций
     )
 
-    print("Processing complete. Annotated video saved as 'crowd_tracked.mp4'.")
+    print("Processing complete. Annotated video saved as 'outputs/track/crowd.avi'.")
