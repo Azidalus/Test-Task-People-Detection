@@ -175,6 +175,7 @@ def process_video(
 if __name__ == "__main__":
     BASE_DIR = Path(__file__).resolve().parent
 
+    # Создание кроссплатформенных путей к входному и выходному видео
     input_video = BASE_DIR / "assets" / "crowd.mp4"
     output_video = BASE_DIR / "outputs" / "crowd_annotated.mp4"
 
