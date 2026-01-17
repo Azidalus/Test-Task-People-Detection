@@ -5,6 +5,7 @@
 
 ## Требования
 - Установленный Docker Desktop
+
 Ссылка для скачивания: [https://docs.docker.com/desktop/](https://docs.docker.com/desktop/)
 
 ## Шаги запуска
