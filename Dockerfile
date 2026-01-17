@@ -20,4 +20,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 
 # 7️. Запуск приложения
-CMD ["python", "tracker.py"]
+CMD ["python", "detector.py"]
